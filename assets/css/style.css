@@ -1,140 +1,110 @@
 :root{
   --maxw: 980px;
+  --text: #1b1b1b;
+  --muted: #5a5a5a;
+  --border: #e6e6e6;
+  --shadow: 0 10px 28px rgba(0,0,0,0.08);
+  --shadow-soft: 0 2px 14px rgba(0,0,0,0.06);
+  --radius: 18px;
 }
+
+*{ box-sizing: border-box; }
+
 body{
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  line-height: 1.55;
+  color: var(--text);
+  line-height: 1.6;
   max-width: var(--maxw);
-  margin: 40px auto;
+  margin: 34px auto;
   padding: 0 16px;
 }
-header{ margin-bottom: 24px; }
-nav a{
-  margin-right: 14px;
-  text-decoration: none;
+
+a{ color: inherit; text-decoration: underline; }
+a:hover{ text-decoration: none; }
+
+.muted{ color: var(--muted); }
+
+h1{ margin: 0 0 6px 0; letter-spacing: -0.3px; }
+h2{ margin: 0 0 10px 0; letter-spacing: -0.2px; }
+h3{ margin: 0 0 6px 0; }
+
+hr{
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 14px 0 0 0;
 }
-nav a:hover{ text-decoration: underline; }
+
+/* ===== Header / Nav ===== */
+
+header{
+  margin-bottom: 18px;
+}
+
+header .site-title{
+  text-decoration: none;
+  color: inherit;
+}
+
+nav{
+  margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+nav a{
+  text-decoration: none;
+  font-size: 1.05rem;
+  font-weight: 700;
+  padding: 9px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: #fff;
+  box-shadow: 0 1px 10px rgba(0,0,0,0.03);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+nav a:hover{
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+  background: #f7f7f7;
+}
+
+/* ===== Generic Card ===== */
+
 .card{
   padding: 18px;
-  border: 1px solid #ddd;
-  border-radius: 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
   margin: 18px 0;
-}
-.muted{ color:#555; }
-footer{ margin-top: 40px; font-size: 0.9rem; color: #555; }
-h1{ margin-bottom: 6px; }
-
-/* ===== Navigation Styling ===== */
-
-nav {
-  margin-top: 12px;
-}
-
-nav a {
-  font-size: 1.25rem;          /* bigger text */
-  font-weight: 800;           /* slightly bold */
-  padding: 10px 16px;          /* button feel */
-  border-radius: 8px;
-  transition: background 0.2s ease, color 0.2s ease;
-}
-
-nav a:hover {
-  background-color: #f0f0f0;  /* subtle highlight */
-}
-
-nav a:first-child {
-  margin-left: 0;
-}
-
-/* ===== People Cards ===== */
-.person img {
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-.person img {
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-.person img {
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-.person img {
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-/* ===== Fancy People Grid ===== */
-
-.people-grid{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 18px;
-  margin-top: 14px;
-}
-
-.person-card{
-  border: 1px solid #e6e6e6;
-  border-radius: 16px;
-  padding: 16px;
   background: #fff;
-  box-shadow: 0 1px 10px rgba(0,0,0,0.05);
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  box-shadow: var(--shadow-soft);
 }
 
-.person-card:hover{
-  transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-}
-
-.person-card img{
-  width: 88px;
-  height: 88px;
-  border-radius: 999px;   /* circle */
-  object-fit: cover;
-  margin-bottom: 10px;
-}
-
-.person-card h3{
-  margin: 6px 0 2px 0;
-  font-size: 1.05rem;
-}
-
-.person-card .cred{
-  margin: 0 0 8px 0;
-  font-weight: 600;
-}
-
-.person-card .research{
-  margin: 0;
-  color: #333;
-}
-
-.person-card .meta{
-  margin-top: 10px;
-  font-size: 0.95rem;
-}
-
-/* ===== Homepage Hero + Featured Cards ===== */
+/* ===== Homepage Hero ===== */
 
 .hero{
+  position: relative;
+  overflow: hidden;
   padding: 26px 22px;
-  border-radius: 18px;
-  border: 1px solid #e6e6e6;
-  background: linear-gradient(135deg, rgba(90,44,130,0.08), rgba(255,255,255,1));
-  box-shadow: 0 1px 12px rgba(0,0,0,0.05);
-  margin-bottom: 18px;
+  border-radius: calc(var(--radius) + 2px);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  margin: 18px 0;
+  background: linear-gradient(135deg, rgba(90,44,130,0.10), rgba(255,255,255,1));
+}
+
+.hero.has-bg::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(135deg, rgba(90,44,130,0.70), rgba(255,255,255,0.88)),
+    url("../img/hero.png") center/cover no-repeat;
+}
+
+.hero > *{
+  position: relative;
 }
 
 .hero-top{
@@ -145,49 +115,154 @@ nav a:first-child {
 }
 
 .hero h2{
-  margin: 0 0 8px 0;
-  font-size: 1.35rem;
+  font-size: 1.55rem;
+  margin: 0 0 10px 0;
 }
 
 .hero p{
   margin: 0;
-  max-width: 70ch;
+  max-width: 75ch;
+  font-size: 1.02rem;
+}
+
+.hero-logo{
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero-logo img{
-  height: 56px;
+  height: 58px;
   width: auto;
-  opacity: 0.95;
+  opacity: 0.98;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.65);
+  padding: 6px 8px;
+  border: 1px solid rgba(255,255,255,0.7);
 }
+
+/* ===== Feature Cards on Home ===== */
 
 .feature-grid{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 14px;
   margin-top: 16px;
 }
 
 .feature{
   padding: 16px;
   border-radius: 16px;
-  border: 1px solid #e6e6e6;
-  background: #fff;
-  box-shadow: 0 1px 10px rgba(0,0,0,0.04);
+  border: 1px solid rgba(255,255,255,0.55);
+  background: rgba(255,255,255,0.92);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
 .feature:hover{
   transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  box-shadow: 0 12px 26px rgba(0,0,0,0.12);
 }
 
 .feature h3{
   margin: 0 0 8px 0;
+  font-size: 1.08rem;
+}
+
+.feature p{
+  margin: 0;
+  color: #2b2b2b;
+}
+
+/* ===== People Layouts ===== */
+
+/* Simple row layout (if you use .person blocks anywhere) */
+.person{
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 12px 0;
+}
+
+.person img{
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+.person-info h3{ margin: 0; }
+.person-info p{ margin: 4px 0; }
+
+/* Fancy grid cards (recommended for People page) */
+.people-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+  margin-top: 14px;
+}
+
+.person-card{
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 16px;
+  background: #fff;
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.person-card:hover{
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.person-card img{
+  width: 78px;
+  height: 78px;
+  border-radius: 999px; /* circle */
+  object-fit: cover;
+  border: 1px solid var(--border);
+  margin-bottom: 10px;
+}
+
+.person-card h3{
+  margin: 6px 0 2px 0;
   font-size: 1.05rem;
 }
 
-@media (max-width: 520px){
+.person-card .cred{
+  margin: 0 0 8px 0;
+  font-weight: 700;
+  color: #2a2a2a;
+}
+
+.person-card .research{
+  margin: 0;
+  color: #333;
+}
+
+.person-card .meta{
+  margin-top: 10px;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+/* ===== Footer ===== */
+
+footer{
+  margin-top: 40px;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+/* ===== Mobile tweaks ===== */
+
+@media (max-width: 560px){
+  body{ margin: 22px auto; }
   .hero-top{ flex-direction: column; align-items: flex-start; }
-  .hero-logo img{ height: 46px; }
+  .hero-logo img{ height: 48px; }
+  nav a{ font-size: 1.0rem; padding: 8px 12px; }
 }
 
