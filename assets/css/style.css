@@ -1,0 +1,25 @@
+:root{
+  --maxw: 980px;
+}
+body{
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  line-height: 1.55;
+  max-width: var(--maxw);
+  margin: 40px auto;
+  padding: 0 16px;
+}
+header{ margin-bottom: 24px; }
+nav a{
+  margin-right: 14px;
+  text-decoration: none;
+}
+nav a:hover{ text-decoration: underline; }
+.card{
+  padding: 18px;
+  border: 1px solid #ddd;
+  border-radius: 14px;
+  margin: 18px 0;
+}
+.muted{ color:#555; }
+footer{ margin-top: 40px; font-size: 0.9rem; color: #555; }
+h1{ margin-bottom: 6px; }
