@@ -3,34 +3,34 @@
 <head>
   <meta charset="utf-28" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>{{ page.title }} | Chakrabarti Lab</title>
+  <title>{{ page.title }} | Chakrabarti Group</title>
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
 <body>
 
-  <header>
-  <div class="site-header">
-    <div class="site-title-wrap">
-      <img src="{{ '/assets/img/ksu-logo.jpeg' | relative_url }}" alt="Kansas State University" class="header-logo">
-      <h1>
-        <a href="{{ '/' | relative_url }}" class="site-title">
-          Chakrabarti Lab
-        </a>
-      </h1>
-    </div>
+<header>
+  <div class="site-title-wrap">
+    <h1>
+      <a href="{{ '/' | relative_url }}" class="site-title">
+        Chakrabarti Lab
+      </a>
+    </h1>
+
+    <img src="{{ '/assets/img/ksu-logo.png' | relative_url }}" 
+         alt="Kansas State University" 
+         class="header-logo">
   </div>
 
   <p class="muted">Soft matter • membranes • computational modeling</p>
 
-<nav>
+  <nav>
     <a href="{{ '/' | relative_url }}">Home</a>
-<a href="{{ '/people.html' | relative_url }}">People</a>
+    <a href="{{ '/people.html' | relative_url }}">People</a>
     <a href="{{ '/research.html' | relative_url }}">Research</a>
     <a href="{{ '/publications.html' | relative_url }}">Publications</a>
     <a href="{{ '/join.html' | relative_url }}">Join</a>
     <a href="{{ '/contact.html' | relative_url }}">Contact</a>
   </nav>
-  <hr>
 </header>
 
 {{ content }}
