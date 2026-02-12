@@ -23,3 +23,26 @@ nav a:hover{ text-decoration: underline; }
 .muted{ color:#555; }
 footer{ margin-top: 40px; font-size: 0.9rem; color: #555; }
 h1{ margin-bottom: 6px; }
+
+/* ===== Navigation Styling ===== */
+
+nav {
+  margin-top: 12px;
+}
+
+nav a {
+  font-size: 1.1rem;          /* bigger text */
+  font-weight: 500;           /* slightly bold */
+  padding: 6px 12px;          /* button feel */
+  border-radius: 6px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+nav a:hover {
+  background-color: #f0f0f0;  /* subtle highlight */
+}
+
+nav a:first-child {
+  margin-left: 0;
+}
+
