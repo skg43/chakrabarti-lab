@@ -31,9 +31,9 @@ nav {
 }
 
 nav a {
-  font-size: 1.15rem;          /* bigger text */
-  font-weight: 600;           /* slightly bold */
-  padding: 8px 14px;          /* button feel */
+  font-size: 1.25rem;          /* bigger text */
+  font-weight: 800;           /* slightly bold */
+  padding: 10px 16px;          /* button feel */
   border-radius: 8px;
   transition: background 0.2s ease, color 0.2s ease;
 }
