@@ -36,6 +36,19 @@ hr{
 
 /* ===== Header / Nav ===== */
 
+.site-title-wrap{
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.header-logo{
+  height: 44px;
+  width: auto;
+}
+
+
+
 header{
   margin-bottom: 18px;
 }
