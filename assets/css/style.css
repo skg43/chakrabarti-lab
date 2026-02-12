@@ -36,26 +36,33 @@ hr{
 
 /* ===== Header / Nav ===== */
 
-.site-title-wrap{
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-
-.header-logo{
-  height: 44px;
-  width: auto;
-}
-
-
-
 header{
   margin-bottom: 18px;
 }
 
-header .site-title{
+.site-title{
   text-decoration: none;
   color: inherit;
+}
+
+.site-title-wrap{
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* title left, logo right */
+  gap: 16px;
+}
+
+.site-title-wrap h1{
+  margin: 0;
+  font-size: 2.2rem;   /* bigger "Chakrabarti Lab" */
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  line-height: 1.1;
+}
+
+.header-logo{
+  height: 46px;
+  width: auto;
 }
 
 nav{
@@ -233,7 +240,7 @@ nav a:hover{
 
 .person-card img{
   width: 120px;
-  height:120px;
+  height: 120px;
   border-radius: 999px; /* circle */
   object-fit: cover;
   border: 1px solid var(--border);
@@ -277,5 +284,8 @@ footer{
   .hero-top{ flex-direction: column; align-items: flex-start; }
   .hero-logo img{ height: 48px; }
   nav a{ font-size: 1.0rem; padding: 8px 12px; }
+
+  .site-title-wrap h1{ font-size: 1.9rem; }
+  .header-logo{ height: 40px; }
 }
 
