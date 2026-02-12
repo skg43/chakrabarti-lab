@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chakrabarti Lab</title>
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; line-height: 1.5; max-width: 900px; margin: 40px auto; padding: 0 16px; }
+    header { margin-bottom: 24px; }
+    nav a { margin-right: 14px; text-decoration: none; }
+    nav a:hover { text-decoration: underline; }
+    .card { padding: 16px; border: 1px solid #ddd; border-radius: 12px; }
+    footer { margin-top: 40px; font-size: 0.9rem; color: #555; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Chakrabarti Lab</h1>
+    <p>Research group website (under construction).</p>
+    <nav>
+      <a href="people.html">People</a>
+      <a href="research.html">Research</a>
+      <a href="publications.html">Publications</a>
+      <a href="join.html">Join</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <div class="card">
+    <h2>Welcome</h2>
+    <p>
+      Add a 2–3 sentence description of the lab and research themes here.
+      You can also place a group photo in <code>assets/img/</code>.
+    </p>
+  </div>
+
+  <footer>
+    <p>© <span id="year"></span> Chakrabarti Lab</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
